@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Level 10.003</title>
+  <link rel="icon" href="data:," />
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #000; font-family: system-ui, sans-serif; }
+    canvas { display: block; }
+    #hud { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff;
+           background: rgba(4, 4, 8, .55); text-align: center; cursor: pointer; line-height: 1.7; z-index: 2; }
+    #hud.hidden { display: none; }
+    #fps { position: fixed; top: 8px; left: 10px; color: #fff; font: 12px monospace; text-shadow: 0 0 3px #000; z-index: 1; }
+    #dot { position: fixed; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 50%; background: rgba(255,255,255,.7); z-index: 1; }
+    #auto { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); color: rgba(255,255,255,.55);
+            font: 12px/1 system-ui, sans-serif; letter-spacing: .12em; z-index: 1; display: none; }
+    #auto.on { display: block; }
+    #fade { position: fixed; inset: 0; background: #fff; opacity: 0; pointer-events: none; z-index: 3; transition: opacity 1.4s ease-in; }
+  </style>
+</head>
+<body>
+  <div id="hud"><div id="hudText">Cargando…</div></div>
+  <div id="fps"></div><div id="dot"></div>
+  <div id="auto">▲ AUTO · WASD para parar</div>
+  <div id="fade"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
